@@ -5,10 +5,10 @@
 	</head>
 	<style>
 			body {background-color: rgb(78, 78, 78);}
-			h1 {text-align: center; font-family: 'Courier New', Courier, monospace; color: rgb(255, 255, 255);}
-			h2 {text-align: center; font-family: 'Courier New', Courier, monospace; color: rgb(255, 255, 255);}
-			h3 {text-align: center; font-family: 'Courier New', Courier, monospace; color: rgb(255, 255, 255);}
-			p {font-family: 'Courier New', Courier, monospace; font-size: 20px; text-align: center; color: rgb(255, 255, 255);}
+			h1 {text-align: center; font-family: 'Courier New', Courier, monospace; color: rgb(255, 255, 255);margin: 20px; padding: 40px;}
+			h2 {text-align: center; font-family: 'Courier New', Courier, monospace; color: rgb(255, 255, 255);margin: 20px}
+			h3 {text-align: center; font-family: 'Courier New', Courier, monospace; color: rgb(255, 255, 255); margin: 20px}
+			p {font-family: 'Courier New', Courier, monospace; font-size: 20px; text-align: center; color: rgb(255, 255, 255); margin: 10px; padding: 20px}
 			footer {text-align: center; font-size: 16px; color: rgb(3, 3, 3);}
 			.projects-grid {
   				display: grid;
@@ -33,38 +33,131 @@
 					box-shadow: 15px 15px 30px rgb(25, 25, 25),
 								-15px -15px 30px rgb(60, 60, 60),
 								inset 0px 0px 20px rgb(255, 255, 255);
-					height: 450px;
 
+			}
+			.fullpage {
+				width: 90%;
+				height: 100%;
+				background-color: rgb(63, 63, 63);
+				margin: 0 auto;
+				border-radius: 10px;
+			}
+			a {
+					position: relative;
+					display: inline-block;
+					padding: 15px 30px;
+					border: 2px solid #fefefe;
+					text-transform: uppercase;
+					color: #fefefe;
+					text-decoration: none;
+					font-weight: 600;
+					font-size: 20px;
+					}
+			a::before {
+					content: '';
+					position: relative;
+					width: calc(100% + 4px);
+					height: calc(100% - 12px);
+					background-color: #212121;
+					transition: 0.3s ease-in-out;
+					transform: scaleY(1);
+			}
+			a::after {
+					content: '';
+					position: absolute;
+					left: 6px;
+					top: -2px;
+					height: calc(100% + 4px);
+					width: calc(100% - 12px);
+					background-color: #212121;
+					transition: 0.3s ease-in-out;
+					transform: scaleX(1);
+					transition-delay: 0.5s;
+			}
+			a:hover::before {
+					transform: scaleY(0);
+			}
+			a:hover::after {
+					transform: scaleX(0);
+					transition-delay: 0s;
+			}
+			a span {
+					position: relative;
+					z-index: 1;
+					transition: 0.3s ease-in-out;
+			}
+			button {
+					background-color: none;
+					text-decoration: none;
+					background-color: #212121;
+					border: none;
+					position: relative; left: 27%; bottom: -100px;
 			}
 	</style>
 	<body>
-			<h1>
-				Welcome to The Noodle Shop - My entire history of projects, all in one place!
-			</h1>
-			<h2>
-				Explore my journey through various projects, showcasing my skills in development and design.
-			</h2>
-	<div class = "projects-grid">
-		<div class = "project-card">
-			<h3>Dad Joke Generator</h3>
-			<p> Here's my first project - a dad joke generator</p>
-		</div>
-		<div class = "project-card">
-			<h3>Simple Calculator</h3>
-			<p> Here's my second project - a simple calculator</p>
-		</div>
-		<div class = "project-card">
-			<h3>Weather App</h3>
-			<p> Here's my third project - a weather app</p>
-		</div>
-	</div>
+		<div class = "fullpage">
+					<h1>
+						
+						Welcome to The Noodle Shop - My entire history of projects, all in one place!
+					</h1>
+					<h2>
+						Explore my journey through various projects, showcasing my skills in development and design.
+					</h2>
 
-	<footer>
-		<p>
-			Thank you for visiting The Noodle Shop! I hope you enjoyed exploring my projects. Feel free to reach out if you have any questions or feedback.
-			Contact me at: raam.sharma.2007@gmail.com
-		</p>
-	</footer>
+
+			<div class = "projects-grid">
+				<div class = "project-card">
+					<h3>Dad Joke Generator</h3>
+					<p> Here's my first project - a dad joke generator</p>
+
+					<button>
+					<a href="#" style="position: relative;"><span>Learn more</span></a>
+					</button>
+			</div>
+
+
+			<div class = "project-card">
+				<h3>Simple Calculator</h3>
+				<p> Here's my second project - a simple calculator</p>
+
+				<button>
+					<a href="#" style="position: relative;"><span>Learn more</span></a>
+				</button>
+			</div>
+
+
+			<div class = "project-card">
+				<h3>Weather App</h3>
+				<p> Here's my third project - a weather app</p>
+
+				<button>
+					<a href="#" style="position: relative;"><span>Learn more</span></a>
+					</button>
+			</div>
+
+
+			<div class = "project-card">
+				<h3>To-Do List</h3>
+				<p> Here's my fourth project - a to-do list app</p>
+
+				<button>
+					<a href="#" style="position: relative;"><span>Learn more</span></a>
+					</button>
+			</div>
+
+
+		</div>
+		</div>
+		<div class = fullpage>
+			<footer>
+				<p>
+					Thank you for visiting The Noodle Shop! I hope you enjoyed exploring my projects. Feel free to reach out if you have any questions or feedback. <br>
+					Contact me at: raam.sharma.2007@gmail.com
+					
+
+				</p>
+			</footer>
+		</div>
 
 	</body>
 </html>
